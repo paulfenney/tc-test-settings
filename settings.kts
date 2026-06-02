@@ -60,11 +60,10 @@ object Build : BuildType({
 
 object HttpsGithubComPaulfenneyTcTestMainRefsHeadsMain : GitVcsRoot({
     name = "Main Repo"
-    url = "https://github.com/paulfenney/tc-test-main"
+    url = "git@github.com:paulfenney/tc-test-main.git"
     branch = "refs/heads/main"
     branchSpec = "refs/heads/*"
-    authMethod = password {
-        userName = "paulfenney"
-        password = "credentialsJSON:8eef4335-0d41-4dd9-8f73-11864f5981eb"
+    authMethod = uploadedKey {
+        uploadedKey = "Deploy Key for Main"
     }
 })
