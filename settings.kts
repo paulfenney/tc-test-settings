@@ -44,10 +44,10 @@ object Build : BuildType({
 
     steps {
         exec {
-            name = "Do something"
+            name = "Change to build settings that should not affect main"
             id = "Do_something"
-            path = "cat"
-            arguments = "README.md"
+            path = "wc"
+            arguments = "-l README.md"
             param("script.content", "cat README.md")
         }
     }
